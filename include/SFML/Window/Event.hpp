@@ -104,7 +104,8 @@ public :
     ////////////////////////////////////////////////////////////
     struct MouseWheelEvent
     {
-        int delta; ///< Number of ticks the wheel has moved (positive is up, negative is down)
+        int deltaX; ///< Number of ticks the wheel has moved (positive is up, negative is down)
+        int deltaY; ///< Number of ticks the wheel has moved (positive is right, negative is left)
         int x;     ///< X position of the mouse pointer, relative to the left of the owner window
         int y;     ///< Y position of the mouse pointer, relative to the top of the owner window
     };

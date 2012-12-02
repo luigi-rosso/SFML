@@ -237,11 +237,12 @@ void WindowImplCocoa::mouseMovedAt(int x, int y)
 }
 
 ////////////////////////////////////////////////////////////
-void WindowImplCocoa::mouseWheelScrolledAt(float delta, int x, int y)
+void WindowImplCocoa::mouseWheelScrolledAt(float deltaX, float deltaY, int x, int y)
 {
     Event event;
     event.type = Event::MouseWheelMoved;
-    event.mouseWheel.delta = delta;
+    event.mouseWheel.deltaX = deltaX;
+    event.mouseWheel.deltaY = deltaY;
     event.mouseWheel.x = x;
     event.mouseWheel.y = y;
     

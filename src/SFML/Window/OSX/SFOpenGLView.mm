@@ -339,7 +339,7 @@ NSUInteger keepOnlyMaskFromData(NSUInteger data, NSUInteger mask);
     if (m_requester != 0) {
         NSPoint loc = [self cursorPositionFromEvent:theEvent];
         
-        m_requester->mouseWheelScrolledAt([theEvent deltaY], loc.x, loc.y);
+        m_requester->mouseWheelScrolledAt([theEvent deltaX], [theEvent deltaY], loc.x, loc.y);
     }
     
     // Transmit to non-SFML responder
